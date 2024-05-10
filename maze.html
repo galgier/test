@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--
+    # vim: ts=2 sw=2 expandtab
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Generator and Solver</title>
+    <script type="module" src="/pyscript/core.js"></script>
+    <link rel="stylesheet" href="/pyscript/core.css">
+  </head>
+  <body>
+    <table>
+      <tr><td><table>Input Parameters</table></td></tr>
+      <tr><td><table>Actions</table></td></tr>
+      <tr><td><table>Maze</table></td></tr>
+    </table>
+
+    <py-config>
+      interpreter = "/pyodide/pyodide.mjs"
+      packages = ["numpy"]
+    </py-config>
+    <script type="py" src="/psmaze.py">
+    </script>
+  </body>
+</html>

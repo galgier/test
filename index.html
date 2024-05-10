@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--
+    # vim: ts=4 sw=4 expandtab
+-->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PyScript Offline</title>
+        <script type="module" src="/pyscript/core.js"></script>
+        <link rel="stylesheet" href="/pyscript/core.css">
+    </head>
+    <body>
+        <py-config>
+            interpreter = "/pyodide/pyodide.mjs"
+            packages = ["numpy"]
+        </py-config>
+        <script type="py">
+            from pyscript import document
+            import numpy as np
+
+            a = np.zeros((3,4,5),dtype=int)
+            document.body.append(str(a))
+        </script>
+    </body>
+</html>
