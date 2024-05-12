@@ -18,7 +18,7 @@
     interpreter = "./pyodide/pyodide.mjs"
     packages = ["numpy"]
   </py-config>
-  <script type="py" src="./psmaze.py"></script>
+  <script type="py" src="./psmaze.py" config="./pyscript.json>></script>
   <table>
     <tr>
       <th>Dimensions</th>
@@ -56,7 +56,7 @@
         <table>
           <tr>
             <td><input type="radio" name="solver" value="deadend"
-            checked size="4"> Dead End Backfill</td>
+            checked size="4">Dead End Backfill</td>
           </tr>
           <tr>
             <td><input type="radio" name="solver" value="random"
