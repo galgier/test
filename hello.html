@@ -1,23 +1,48 @@
 <!DOCTYPE html>
 <!--
-    # vim: ts=4 sw=4 expandtab
+  # vim: ts=2 sw=2 expandtab
 -->
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PyScript Offline</title>
-        <script type="module" src="./pyscript/core.js"></script>
-        <link rel="stylesheet" href="./pyscript/core.css">
-    </head>
-    <body>
-        <py-config>
-            interpreter = "./pyodide/pyodide.mjs"
-        </py-config>
-        <script type="py">
-            from pyscript import document
+<html>
+<head>
+  <!-- Recommended meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+  <!-- This script tag bootstraps PyScript -->
+  <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+  <style>
+	#loading { outline: none; border: none; background: transparent }
+  </style>
+  <!--
+    The following code will wait for pyscript to be ready and then will
+    close the dialog box allowing everything else to run as normal.
+  -->
+  <script type="module">
+      const loading = document.getElementById('loading');
+      addEventListener('py:ready', () => loading.close());
+      loading.showModal();
+  </script>
+  <title>PyScript Hello World</title>
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+</head>
+<body>
+  <!--
+    This is the modal dialog that gets opened to warn the user that
+    pyscript is still loading.  It will be closed when ready to run.
+  -->
+  <dialog id="loading">
+    <h1>Loading...</h1>
+  </dialog>
 
-            document.body.append("Hello from local PyScript")
-        </script>
-    </body>
+  <section class="pyscript">
+    Hello world!<br>
+    This is the current date and time, as computed by Python: 
+    <script type="py">
+      from pyscript import display
+      from datetime import datetime
+      now = datetime.now()
+      display(now.strftime("%m/%d/%Y, %H:%M:%S"))
+    </script>
+  </section>
+</body>
 </html>
