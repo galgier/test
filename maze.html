@@ -3,38 +3,66 @@
     # vim: ts=4 sw=4 expandtab
 -->
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PyScript Offline</title>
-        <script type="module" src="./pyscript/core.js"></script>
-        <link rel="stylesheet" href="./pyscript/core.css">
-    </head>
-    <body>
-        <py-config>
-            interpreter = "./pyodide/pyodide.mjs"
-            packages = ["numpy"]
-        </py-config>
+<head>
+  <meta name="generator" content=
+  "HTML Tidy for HTML5 for Linux version 5.8.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content=
+  "width=device-width, initial-scale=1.0">
+  <title>PyScript Offline</title>
+  <script type="module" src="./pyscript/core.js"></script>
+  <link rel="stylesheet" href="./pyscript/core.css">
+</head>
+<body>
+  <py-config>interpreter = "./pyodide/pyodide.mjs" packages =
+  ["numpy"]</py-config>
+  <table>
+    <tr>
+      <th>Dimensions</th>
+      <th>Generators</th>
+      <th>Solvers</th>
+    </tr>
+    <tr>
+      <td>
         <table>
-<tr>
-	<th>Dimensions</th>
-	<th>Generators</th>
-	<th>Solvers</th>
-</tr>
-<tr>
-	<td><table>
-	<tr><th>Width</th><td><input type="text" name="width" value="10" size="5" maxlength="5"></td></tr>
-	<tr><th>Height</th><td><input type="text" name="height" value="10" size="5" maxlength="5"></td></tr>
-</table></td>
-	<td><table>
-<tr><td><input type="radio" name="generator" value="recursive" size="4">Recursive Backtracker</td></tr>
-	<tr><td><input type="radio" name="generator" value="wilsons" checked size="4">Wilson's Algorithm</td></tr>
-</table></td>
-	<td><table>
-	<tr><td><input type="radio" name="solver" value="deadend" checked size="4"> Dead End Backfill</td></tr>
-	<tr><td><input type="radio" name="solver" value="random" size="4">Random Mouse Algorithm</td></tr>
-</table></td>
-</tr>
-</table><canvas width="200" height="200" id="maze"></canvas>
-    </body>
+          <tr>
+            <th>Width</th>
+            <td><input type="text" name="width" value="10" size="5"
+            maxlength="5"></td>
+          </tr>
+          <tr>
+            <th>Height</th>
+            <td><input type="text" name="height" value="10" size=
+            "5" maxlength="5"></td>
+          </tr>
+        </table>
+      </td>
+      <td>
+        <table>
+          <tr>
+            <td><input type="radio" name="generator" value=
+            "recursive" size="4">Recursive Backtracker</td>
+          </tr>
+          <tr>
+            <td><input type="radio" name="generator" value=
+            "wilsons" checked size="4">Wilson's Algorithm</td>
+          </tr>
+        </table>
+      </td>
+      <td>
+        <table>
+          <tr>
+            <td><input type="radio" name="solver" value="deadend"
+            checked size="4"> Dead End Backfill</td>
+          </tr>
+          <tr>
+            <td><input type="radio" name="solver" value="random"
+            size="4">Random Mouse Algorithm</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <canvas width="200" height="200" id="maze"></canvas>
+</body>
 </html>
