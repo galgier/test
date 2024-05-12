@@ -1,4 +1,4 @@
-# vim: ts=2 sw=2 expandtab
+# vim: ts=4 sw=4 expandtab
 from pyscript import document
 import numpy as np
 
