@@ -4,19 +4,15 @@
 -->
 <html lang="en">
 <head>
-  <meta name="generator" content=
-  "HTML Tidy for HTML5 for Linux version 5.8.0">
-  <meta charset="UTF-8">
-  <meta name="viewport" content=
-  "width=device-width, initial-scale=1.0">
-  <title>PyScript Offline</title>
-  <script type="module" src="./pyscript/core.js"></script>
-  <link rel="stylesheet" href="./pyscript/core.css">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PyScript Test</title>
+  <link rel="stylesheet" href="https://pyscript.net/releases/2024.5.1/core.css">
+  <script type="module" src="https://pyscript.net/releases/2024.5.1/core.js"></script>
 </head>
 <body>
   <py-config>
-    interpreter = "./pyodide/pyodide.mjs"
-    packages = ["numpy"]
   </py-config>
   <table>
     <tr>
@@ -65,14 +61,10 @@
       </td>
     </tr>
   </table>
-  <canvas width="200" height="200" id="maze"></canvas>
-  <script type="py">
-# vim: ts=4 sw=4 expandtab
-from pyscript import document
-import numpy as np
-
-a = np.zeros((3,4,5),dtype=int)
-document.display(str(a))
+  <script type="py" worker target="the-place">
+    from pyscript import display
+    display("PyScript")
   </script>
+  <h1 id="the-place"></h1>
 </body>
 </html>
