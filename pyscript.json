@@ -1,3 +1,4 @@
 {
+	"interpreter": "./pyodide/pyodide.mjs",
 	"packages": [ "numpy" ]
 }
