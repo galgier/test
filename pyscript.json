@@ -1,4 +1,6 @@
 {
-	"interpreter": "./pyodide/pyodide.mjs",
 	"packages": [ "numpy" ]
+	"files": {
+		"./psmaze.py": "psmaze.py"
+	}
 }
